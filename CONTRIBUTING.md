@@ -27,12 +27,10 @@ The list is intentionally selective. Generic LLM wrappers, unvalidated demos, du
 
 - **AI Scientist Systems:** connected workflows spanning several research stages.
 - **AI Co-Scientists / Research Agents:** systems that assist a scientist or automate only part of the loop.
-- **By Research Stage:** the most important stage-specific capability.
-- **By Domain:** strong domain-specific discovery or research systems.
 - **Benchmarks & Evaluation:** datasets, tasks, or environments designed to measure scientific-agent ability.
 - **Datasets & Environments:** corpora, APIs, simulated worlds, lab environments, and domain resources used by agents.
 
-An entry may appear in multiple sections when the duplication improves discoverability.
+Give each resource one canonical home. Use links to that entry when it is relevant elsewhere; do not duplicate the same project across multiple taxonomy sections.
 
 ## Preferred entry format
 
@@ -44,6 +42,8 @@ Use a compact bullet with direct links:
 ~~~
 
 Use the badge style already present in the core systems section when adding a major entry. If an official code or website does not exist, omit that link rather than adding a third-party mirror without labeling it.
+
+For a GitHub project, append a live GitHub Stars badge using the same OWNER/REPO as the official code link. Do not add a stars badge when there is no public GitHub repository.
 
 ## Pull request checklist
 
