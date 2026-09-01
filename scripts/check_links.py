@@ -7,6 +7,8 @@ Exit code 1 if any link is dead. shields.io badge images are skipped.
 import concurrent.futures as cf
 import re
 import sys
+import threading
+import time
 import urllib.error
 import urllib.request
 
@@ -25,8 +27,21 @@ def normalize(url):
     return url
 
 
+# huggingface.co rate-limits bursts with HTTP 429; serialize and pace those.
+_HF_LOCK = threading.Lock()
+_HF_DELAY = 1.5
+
+
 def probe(url):
     clean = normalize(url.rstrip('.,;:'))
+    if "huggingface.co" in clean:
+        with _HF_LOCK:
+            time.sleep(_HF_DELAY)
+            return _probe(clean)
+    return _probe(clean)
+
+
+def _probe(clean):
     for method in ("HEAD", "GET"):
         req = urllib.request.Request(clean, method=method, headers={"User-Agent": UA})
         try:
