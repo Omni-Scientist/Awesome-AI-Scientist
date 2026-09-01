@@ -13,6 +13,8 @@ import urllib.error
 import urllib.request
 
 SKIP_HOSTS = ("img.shields.io", "awesome.re", "api.star-history.com", "contrib.rocks")
+# documentation placeholders, not real targets
+SKIP_SUBSTRINGS = ("OWNER/REPO", "example.com", "example.org", "PAPER_OR_PREPRINT_URL", "OFFICIAL_")
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
 URL_RE = re.compile(r'https?://[^\s\)\]\}"\'<>]+')
 
@@ -29,15 +31,20 @@ def normalize(url):
 
 # huggingface.co rate-limits bursts with HTTP 429; serialize and pace those.
 _HF_LOCK = threading.Lock()
-_HF_DELAY = 1.5
+_HF_DELAY = 2.0
+_RETRY_429 = 3
 
 
 def probe(url):
     clean = normalize(url.rstrip('.,;:'))
     if "huggingface.co" in clean:
         with _HF_LOCK:
-            time.sleep(_HF_DELAY)
-            return _probe(clean)
+            for attempt in range(_RETRY_429):
+                time.sleep(_HF_DELAY * (attempt + 1))
+                result = _probe(clean)
+                if result[1] != 429:
+                    return result
+            return result
     return _probe(clean)
 
 
@@ -64,7 +71,7 @@ def main(paths):
         with open(p, encoding="utf-8") as fh:
             for u in URL_RE.findall(fh.read()):
                 u = u.rstrip('.,;:')
-                if any(h in u for h in SKIP_HOSTS):
+                if any(h in u for h in SKIP_HOSTS) or any(x in u for x in SKIP_SUBSTRINGS):
                     continue
                 if u not in urls:
                     urls.append(u)
