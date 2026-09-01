@@ -48,6 +48,18 @@ def probe(url):
     return _probe(clean)
 
 
+def _crossref_ok(clean):
+    """doi.org blocks bots with 403; ask Crossref whether the DOI is real."""
+    doi = clean.split("doi.org/", 1)[1]
+    api = "https://api.crossref.org/works/" + doi
+    req = urllib.request.Request(api, headers={"User-Agent": UA})
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            return r.status == 200
+    except Exception:
+        return False
+
+
 def _probe(clean):
     for method in ("HEAD", "GET"):
         req = urllib.request.Request(clean, method=method, headers={"User-Agent": UA})
@@ -58,6 +70,8 @@ def _probe(clean):
             if e.code in (403, 405, 429) and method == "HEAD":
                 continue
             if method == "GET":
+                if e.code == 403 and "doi.org/" in clean and _crossref_ok(clean):
+                    return clean, 200, "verified via crossref"
                 return clean, e.code, e.reason
         except Exception as e:
             if method == "GET":
