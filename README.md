@@ -2,9 +2,7 @@
 
 <img src="assets/fig1.png" alt="Awesome AI Scientist: end-to-end AI scientists, co-scientists and runnable workbenches, across the research loop of ideate, discover, experiment, write, verify and knowledge, plus models, data, tools, benchmarks and leaderboards" width="100%">
 
-# 🧪 Awesome AI Scientist
-
-# Papers, systems, benchmarks, datasets and leaderboards, all in one place
+<h1 align="left">🧪 Awesome AI Scientist: Papers, systems, benchmarks, datasets and leaderboards, all in one place</h1>
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![License](https://img.shields.io/badge/license-CC%20BY%204.0-lightgrey?style=flat-square&logo=creativecommons&logoColor=white)](LICENSE)
