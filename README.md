@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/hero.svg" alt="Awesome AI Scientist" width="100%">
+<img src="assets/fig1.png" alt="Awesome AI Scientist: end-to-end AI scientists, co-scientists and runnable workbenches, across the research loop of ideate, discover, experiment, write, verify and knowledge, plus models, data, tools, benchmarks and leaderboards" width="100%">
 
 # 🧪 Awesome AI Scientist
 
