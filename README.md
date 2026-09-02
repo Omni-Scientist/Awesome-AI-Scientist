@@ -4,7 +4,7 @@
 
 # 🧪 Awesome AI Scientist
 
-### Papers, systems, benchmarks, datasets and leaderboards, all in one place
+# Papers, systems, benchmarks, datasets and leaderboards, all in one place
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![License](https://img.shields.io/badge/license-CC%20BY%204.0-lightgrey?style=flat-square&logo=creativecommons&logoColor=white)](LICENSE)
