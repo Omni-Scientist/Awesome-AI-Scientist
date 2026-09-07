@@ -44,33 +44,51 @@ Give each resource one canonical home. Link to that entry when it is relevant el
 
 ## Entry format
 
-One line per entry. Bold name, a middle dot, one sentence, then badges.
+One line per entry. What follows the name depends on whether the entry has a paper.
+
+**A paper carries its real title**, quoted, exactly as the paper prints it. Do not paraphrase it.
 
 ~~~markdown
-- ⭐ **Project name** · One sentence saying what it does. [![arXiv](https://img.shields.io/badge/arXiv-2408.06292-B31B1B?style=flat-square)](https://arxiv.org/abs/2408.06292) [![Code](https://img.shields.io/github/stars/OWNER/REPO?style=flat-square&logo=github&label=Code&color=181717)](https://github.com/OWNER/REPO) [![Daily Papers](https://img.shields.io/badge/%F0%9F%A4%97-FFD21E?style=flat-square)](https://huggingface.co/papers/2408.06292) [![Site](https://img.shields.io/badge/Site-2EA44F?style=flat-square)](https://example.org)
+- ⭐ [The AI Scientist](https://arxiv.org/abs/2408.06292), "Towards Fully Automated Open-Ended Scientific Discovery". [badges]
 ~~~
 
-The `⭐` prefix marks an editor's pick. Use it sparingly.
+Where the paper is titled `Name: Something`, drop the `Name:` prefix, since the entry name already carries it. Where the entry name already is the full paper title, as most surveys are, leave the title out rather than printing it twice.
+
+**Anything without a paper**, a workbench, dataset, platform or blog post, carries a one-sentence description of what it does.
+
+~~~markdown
+- [GPT Researcher](https://github.com/assafelovic/gpt-researcher), Autonomous deep research over web and local documents, emitting a cited report. [badges]
+~~~
+
+The separator is a comma, not a dash. The `⭐` prefix marks an editor's pick; use it sparingly.
 
 ### Badge conventions
 
 | Badge | Pattern | Notes |
 |:--|:--|:--|
-| arXiv | `badge/arXiv-<ID>-B31B1B` | put the **real** arXiv ID in the label, never the word "Paper" |
+| arXiv | `badge/arXiv-<ID>-B31B1B` | the **real** arXiv id in the label, never the word "Paper"; unlinked when the entry name already points at the paper |
 | Journal | `badge/<Venue>-<Year>-006633` | Nature, Science, NEJM_AI, Nat_Mach_Intell, bioRxiv |
-| OpenReview | `badge/OpenReview-Paper-8E44AD` | |
+| Venue | `badge/<Venue>_<Year>-4B5563` | conference acceptance, unlinked |
 | Code | `github/stars/OWNER/REPO?...&label=Code&color=181717` | one badge carries both the repo link and the live star count |
-| License | `badge/<SPDX>-6E7681` | static, from the actual license file |
-| Daily Papers | `badge/%F0%9F%A4%97-FFD21E` | only if `https://huggingface.co/papers/<ID>` really resolves |
-| Dataset | `badge/%F0%9F%A4%97%20Dataset-FFD21E` | Hugging Face dataset |
-| Site | `badge/Site-2EA44F` | official project page |
-| Leaderboard | `badge/Leaderboard-F59E0B` | |
+| Daily Papers | `badge/dynamic/json?url=...huggingface.co/api/papers/<ID>&query=$.upvotes` | live upvote count, only where the papers page exists |
+| Dataset | `badge/%F0%9F%A4%97%20Dataset-06B6D4` | Hugging Face dataset, cyan |
+| Model | `badge/%F0%9F%A4%97%20Model-8B5CF6` | Hugging Face model, purple |
+| Website | `badge/Website-2EA44F` | project page, `logo=googlechrome` unless the site has a real brand logo in shields |
 
 Omit a badge rather than pointing it at a third-party mirror. Do not add a stars badge when there is no public repository.
 
-### Checking a Hugging Face Daily Papers link
+## Checks before you open a pull request
 
-`https://huggingface.co/papers/<ARXIV_ID>` returns 404 for an ID that is not indexed, so an invented link fails loudly. The link checker paces requests to that host, since it answers bursts with HTTP 429.
+~~~bash
+npm install
+npm run lint     # structure, dead links, duplicate links, table of contents
+npm run links    # every URL resolves
+~~~
+
+`npm run lint` runs awesome-lint's rule set with one rule switched off, the one that requires a dash between the link and the description. This list follows the paper-list convention instead, so that rule does not apply. All 65 other rules still run.
+
+`https://huggingface.co/papers/<ARXIV_ID>` returns 404 for an id that is not indexed, so an invented link fails loudly. The link checker paces requests to that host, since it answers bursts with HTTP 429.
+
 
 ## Pull request checklist
 

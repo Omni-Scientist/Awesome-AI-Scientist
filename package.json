@@ -1,0 +1,16 @@
+{
+  "name": "awesome-ai-scientist",
+  "private": true,
+  "description": "Tooling for maintaining the list. Not a published package.",
+  "type": "module",
+  "scripts": {
+    "lint": "node scripts/lint.mjs README.md",
+    "links": "python3 scripts/check_links.py README.md"
+  },
+  "devDependencies": {
+    "awesome-lint": "^2.3.0",
+    "remark": "^15.0.1",
+    "to-vfile": "^8.0.0",
+    "vfile-reporter-pretty": "^7.0.0"
+  }
+}
