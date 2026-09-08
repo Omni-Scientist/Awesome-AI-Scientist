@@ -49,7 +49,7 @@ One line per entry. What follows the name depends on whether the entry has a pap
 **A paper carries its real title**, quoted, exactly as the paper prints it. Do not paraphrase it.
 
 ~~~markdown
-- ⭐ [The AI Scientist](https://arxiv.org/abs/2408.06292), "Towards Fully Automated Open-Ended Scientific Discovery". [badges]
+- [The AI Scientist](https://arxiv.org/abs/2408.06292), "Towards Fully Automated Open-Ended Scientific Discovery". [badges]
 ~~~
 
 Where the paper is titled `Name: Something`, drop the `Name:` prefix, since the entry name already carries it. Where the entry name already is the full paper title, as most surveys are, leave the title out rather than printing it twice.
@@ -60,7 +60,7 @@ Where the paper is titled `Name: Something`, drop the `Name:` prefix, since the 
 - [GPT Researcher](https://github.com/assafelovic/gpt-researcher), Autonomous deep research over web and local documents, emitting a cited report. [badges]
 ~~~
 
-The separator is a comma, not a dash. The `⭐` prefix marks an editor's pick; use it sparingly.
+The separator is a comma, not a dash. Entries are not ranked; the list carries no editor's-pick marker.
 
 ### Badge conventions
 
