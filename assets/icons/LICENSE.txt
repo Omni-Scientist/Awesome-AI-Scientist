@@ -1,0 +1,2 @@
+Icons in this directory are from Twemoji (https://github.com/jdecked/twemoji),
+copyright Twitter, Inc and other contributors, licensed CC-BY 4.0.
