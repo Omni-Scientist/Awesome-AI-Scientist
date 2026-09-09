@@ -1,2 +1,7 @@
 node_modules/
 package-lock.json
+scripts/.fontcache/
+__pycache__/
+scripts/.stars_cache.json
+# the built site lives on the gh-pages branch, not here
+docs/
