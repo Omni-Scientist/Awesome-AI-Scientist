@@ -29,7 +29,7 @@
 - [🔬 Co-Scientists & Research Agents](#-co-scientists--research-agents) (27)
 - [🧰 Open-Source Workbenches](#-open-source-workbenches) (64)
 - [🧭 Surveys & Position Papers](#-surveys--position-papers) (38)
-- [🔭 Research Stages](#-research-stages) (72)
+- [🔭 Research Stages](#-research-stages) (73)
 - [🌍 Domains](#-domains) (60)
 - [🧠 Scientific Foundation Models](#-scientific-foundation-models) (14)
 - [📊 Benchmarks & Evaluation](#-benchmarks--evaluation) (85)
@@ -355,6 +355,7 @@ Work that targets one stage of the research loop rather than the whole thing.
 - [Fact or Fiction](https://arxiv.org/abs/2004.14974), "Verifying Scientific Claims". ![EMNLP 2020](https://img.shields.io/badge/EMNLP_2020-4B5563?style=flat-square) ![arXiv](https://img.shields.io/badge/arXiv-2004.14974-B31B1B?style=flat-square) [![Code](https://img.shields.io/github/stars/allenai/scifact?style=flat-square&logo=github&label=Code&color=181717)](https://github.com/allenai/scifact) [![Daily Papers](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fhuggingface.co%2Fapi%2Fpapers%2F2004.14974&query=%24.upvotes&label=%F0%9F%A4%97%20Daily&color=FFD21E&style=flat-square)](https://huggingface.co/papers/2004.14974)
 - [MultiVerS](https://arxiv.org/abs/2112.01640), "Improving scientific claim verification with weak supervision and full-document context". ![NAACL 2022 Findings](https://img.shields.io/badge/NAACL_2022_Findings-4B5563?style=flat-square) ![arXiv](https://img.shields.io/badge/arXiv-2112.01640-B31B1B?style=flat-square) [![Code](https://img.shields.io/github/stars/dwadden/multivers?style=flat-square&logo=github&label=Code&color=181717)](https://github.com/dwadden/multivers) [![Daily Papers](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fhuggingface.co%2Fapi%2Fpapers%2F2112.01640&query=%24.upvotes&label=%F0%9F%A4%97%20Daily&color=FFD21E&style=flat-square)](https://huggingface.co/papers/2112.01640)
 - [SciClaimHunt](https://arxiv.org/abs/2502.10003), "A Large Dataset for Evidence-based Scientific Claim Verification". ![IJCNN 2025](https://img.shields.io/badge/IJCNN_2025-4B5563?style=flat-square) ![arXiv](https://img.shields.io/badge/arXiv-2502.10003-B31B1B?style=flat-square) [![Code](https://img.shields.io/github/stars/SciClaimHunt/SciClaimHunt?style=flat-square&logo=github&label=Code&color=181717)](https://github.com/SciClaimHunt/SciClaimHunt) [![Daily Papers](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fhuggingface.co%2Fapi%2Fpapers%2F2502.10003&query=%24.upvotes&label=%F0%9F%A4%97%20Daily&color=FFD21E&style=flat-square)](https://huggingface.co/papers/2502.10003)
+- [cert-machine](https://github.com/carlostoledo1891/cert-machine), Independent exact certification of machine-generated mathematics — exact arithmetic, no code shared with the claimant, refusal as a verdict. ![Code](https://img.shields.io/github/stars/carlostoledo1891/cert-machine?style=flat-square&logo=github&label=Code&color=181717) [![Website](https://img.shields.io/badge/Website-2EA44F?style=flat-square&logo=googlechrome&logoColor=white)](https://carlostoledo.co)
 
 ### 🧠 Knowledge, tools & environments
 
