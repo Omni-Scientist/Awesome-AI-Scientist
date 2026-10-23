@@ -627,6 +627,7 @@ Corpora, tools, simulated worlds, and domain data that agents feed on. Scoped to
 - [bioRxiv and medRxiv API](https://api.biorxiv.org/), JSON endpoints for preprint metadata, full-text links and published-version tracking across both preprint servers. ![Website](https://img.shields.io/badge/Website-2EA44F?style=flat-square&logo=googlechrome&logoColor=white)
 - [OpenReview API v2](https://docs.openreview.net/), Programmatic access to submissions, reviews, rebuttals and decisions across major machine-learning venues. ![Website](https://img.shields.io/badge/Website-2EA44F?style=flat-square&logo=googlechrome&logoColor=white)
 - [Papers with Code successor](https://huggingface.co/papers), Papers with Code has shut down; its domain now redirects to Hugging Face Papers, the de facto successor index. ![Website](https://img.shields.io/badge/Website-2EA44F?style=flat-square&logo=googlechrome&logoColor=white)
+- [aiXiv.online](https://aixiv.online/), Archive of AI-assisted mathematics with 5,600+ papers found by screening the full text of new arXiv math papers for declared AI use, each recording the AI contribution and repository, with a JSON API and MCP server. ![Website](https://img.shields.io/badge/Website-2EA44F?style=flat-square&logo=googlechrome&logoColor=white)
 
 ### ⚗️ Chemistry, materials & molecules
 
