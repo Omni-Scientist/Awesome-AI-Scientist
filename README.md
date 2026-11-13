@@ -164,6 +164,7 @@ Platforms you can clone, install, and drive today.
 - [DeepResearchAgent](https://github.com/SkyworkAI/DeepResearchAgent), Hierarchical planner plus specialist agents for deep research and general task execution. ![Code](https://img.shields.io/github/stars/SkyworkAI/DeepResearchAgent?style=flat-square&logo=github&label=Code&color=181717)
 - [DeepLiterature](https://github.com/ScienceOne-AI/DeepLiterature), Open research assistant combining search, code execution, link resolution and information expansion. ![Code](https://img.shields.io/github/stars/ScienceOne-AI/DeepLiterature?style=flat-square&logo=github&label=Code&color=181717)
 - [Deep Research from Scratch](https://github.com/langchain-ai/deep_research_from_scratch), LangGraph reference implementation of a deep-research agent, the maintained successor to Open Deep Research. ![Code](https://img.shields.io/github/stars/langchain-ai/deep_research_from_scratch?style=flat-square&logo=github&label=Code&color=181717)
+- [OpenDraft](https://github.com/federicodeponte/opendraft), Multi-agent pipeline that drafts research papers and theses, checking every citation against Crossref, OpenAlex and Semantic Scholar before it appears in the bibliography. ![Code](https://img.shields.io/github/stars/federicodeponte/opendraft?style=flat-square&logo=github&label=Code&color=181717)
 
 ### 🔬 Lab automation and self-driving labs
 
